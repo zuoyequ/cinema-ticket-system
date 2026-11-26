@@ -1,0 +1,3 @@
+INSERT INTO `buyTicket` (`buy_id`, `id`, `time`, `movie_name`, `time_start`, `time_end`, `type`, `seat`, `seat_id`, `price`, `vip_price`) VALUES (1, '1', '3月7日', '孤注一掷', '13:40', '15:50散', '国语2D', '五号厅（凭电影票免费停车）', 5, '32.9起', 'VIP 29.9元起');
+INSERT INTO `buyTicket` (`buy_id`, `id`, `time`, `movie_name`, `time_start`, `time_end`, `type`, `seat`, `seat_id`, `price`, `vip_price`) VALUES (2, '1', '3月7日', '孤注一掷', '18:40', '20:50散', '国语2D', '五号厅（凭电影票免费停车）', 5, '32.9起', 'VIP 29.9元起');
+INSERT INTO `buyTicket` (`buy_id`, `id`, `time`, `movie_name`, `time_start`, `time_end`, `type`, `seat`, `seat_id`, `price`, `vip_price`) VALUES (3, '2', '3月7日', '韩战', '18:40', '21:50散', '国语2D', '五号厅（凭电影票免费停车', 5, '32.9起', 'VIP 29.9元起');

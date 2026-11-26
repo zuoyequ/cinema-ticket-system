@@ -1,0 +1,76 @@
+<view class="backB">
+  <view class="head">
+    <image src="/icon/touxiang.png" class="im1" bind:tap="changeImg"/>
+    <view class="abc">
+      <view class="shenf" wx:for="{{chaxun3}}">
+        <text class="t1">{{item.username}}</text>
+        <text style="font-size: 30rpx; color: rgb(255, 129, 11);">管理员</text>
+      </view>
+      <text class="t2">个人信息</text>
+      <view style="margin-top: 1rpx;" bind:tap="gotoPerson"  data-id="{{id}}" data-type="{{type}}"><image src="/icon/xiangyou.png" mode="aspectFit" class="xiangyou"/></view>
+    </view>
+  </view>
+  <view class="body">
+    <view class="v">
+      <image src="/icon/shangcheng.jpg" mode="aspectFit" class="si"/>
+      <text style="font-size: 26rpx;margin-left: 45rpx;">在线商城</text>
+    </view>
+    <view class="v">
+      <image src="/icon/shoucangjia.jpg" mode="aspectFit" class="si"/>
+      <text style="margin-left: 55rpx;font-size: 30rpx;">收藏夹</text>
+    </view>
+    <view class="v">
+      <image src="/icon/qianbao.jpg" mode="aspectFit" class="si"/>
+      <text style="margin-left: 43rpx;font-size: 30rpx;">我的钱包</text>
+    </view>
+    <view class="v">
+      <image src="/icon/jilu.jpg" mode="aspectFit" class="si"/>
+      <text style="margin-left: 43rpx;font-size: 30rpx;">观影记录</text>
+    </view>
+  </view>
+  <view class="bottom">
+    <view class="list" bind:tap="gotoEdit" data-type="{{type}}" data-id="{{id}}">
+      <image src="/icon/mine_.png"></image>
+        <view class="txt"><text>编辑资料</text></view>
+        <image src="/icon/xiangyou2.png" mode="aspectFit" class="you"/>
+    </view>
+    <view class="list">
+      <image src="/icon/huangguan.jpg"></image>
+        <view class="txt"><text>会员中心</text></view>
+        <image src="/icon/xiangyou2.png" mode="aspectFit" class="you"/>
+    </view>
+    <view class="list" bind:tap="gotoStatitics">
+      <image src="/icon/tongji.png"></image>
+        <view class="txt"><text>数据统计</text></view>
+        <image src="/icon/xiangyou2.png" mode="aspectFit" class="you"/>
+    </view>
+    <view class="list" bind:tap="gotoPlatform" data-id="{{id}}">
+      <image src="/icon/guanli.png"></image>
+        <view class="txt"><text>平台管理</text></view>
+        <image src="/icon/xiangyou2.png" mode="aspectFit" class="you"/>
+    </view>
+    <view class="list">
+      <image src="/icon/kefu.jpg"></image>
+        <view class="txt"><text>在线客服</text></view>
+        <image src="/icon/xiangyou2.png" mode="aspectFit" class="you"/>
+    </view>
+    <view class="list">
+      <image src="/icon/guanyu.png"></image>
+        <view class="txt"><text>关于我们</text></view>
+        <image src="/icon/xiangyou2.png" mode="aspectFit" class="you"/>
+    </view>
+    <view class="list">
+      <image src="/icon/shezhi.png"></image>
+        <view class="txt"><text>应用设置</text></view>
+        <image src="/icon/xiangyou2.png" mode="aspectFit" class="you"/>
+    </view>
+    <view class="list">
+      <image src="/icon/tuichu.jpg"></image>
+        <view class="txt"><text>退出登录</text></view>
+        <image src="/icon/xiangyou2.png" mode="aspectFit" class="you"/>
+    </view>
+  </view>
+</view>
+
+<!-- 修正：微信 tabBar 最多 5 项，本页已改为普通页面，手动引入自定义底部导航 -->
+<custom-tab-bar id="tab-bar" />

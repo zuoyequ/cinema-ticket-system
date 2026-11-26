@@ -1,0 +1,50 @@
+<!--pages/work-index/work-index.wxml-->
+<view class="sousuo">
+  <view class="aaa">
+    <image src="/icon/logo.png" mode="aspectFit"/>
+  </view>
+  <view class="searchbox">
+    <input placeholder="请输入搜索" bindinput="getInput" value="{{val}}"></input>
+    <icon type="search" wx:if="{{isSearch}}"/>
+    <icon type="clear" wx:if="{{isClear}}" bind:tap="clearTap"/>
+  </view>
+</view>
+<view class="swi">
+  <swiper indicator-dots="true" class="swiper" autoplay="2">
+    <swiper-item><image src="/icon/02.jpg" class="img0"></image></swiper-item>
+    <swiper-item><image src="/icon/jtmd.jpg" class="img0"></image></swiper-item>
+    <swiper-item><image src="/icon/zm.jpg" class="img0"></image></swiper-item>
+  </swiper>
+</view>
+
+<view class="scrol">
+  <scroll-view scroll-x="true" class="scoll-view">
+    <view class="ccc"><image src="/icon/huatong.png" mode="aspectFit"/><text>演唱会</text></view>
+    <view class="ccc"><image src="/icon/yinyue.png" mode="aspectFit"/><text>演出</text></view>
+    <view class="ccc"><image src="/icon/zuichun.png" mode="aspectFit"/><text>脱口秀</text></view>
+    <view class="ccc"><image src="/icon/yinyuejie.png" mode="aspectFit"/><text>音乐节</text></view>
+    <view class="ccc"><image src="/icon/fangying.png" mode="aspectFit"/><text>制片厂</text></view>
+  </scroll-view>
+</view>
+
+<view class="tab">
+  <view class="tab-item" wx:for="{{tab}}" wx:key="id" bind:tap="changetab" data-index="{{index}}" style="color: {{item.isclick==true?'skyblue':'black'}}">{{item.name}}</view>
+</view>
+
+<view class="content">
+  <view class="content_item" style="display: {{active==0?'block':'none'}}">
+    <view class="content_item2" wx:for="{{get_moviecontent3}}">
+      <image class="image1" src="{{item.url}}" bind:tap="gotoIntroduction" data-index="1"/>
+      <view class="movieP">
+        <view class="mp1"><text>{{item.movie_name}}</text></view>
+        <view class="mp2"><text>观众评分：</text><text style="font-weight: 500;">{{item.score}}</text></view>
+        <view class="mp3"><text>{{item.zhuyan}}</text></view>
+        <view class="mp4"><text>{{item.address}}|{{item.duration}}</text></view>
+      </view>
+      <image class="image2" src="/icon/goupiao.png" mode="aspectFit" bind:tap="buyTicket" data-index="{{item.id}}"/>
+    </view>
+  </view>
+  
+</view>
+
+

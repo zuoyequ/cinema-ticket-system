@@ -1,0 +1,50 @@
+/* pages/addAddress/addAddress.wxss */
+
+.weui-cells{
+  width: 100%;
+  margin-left: 25rpx;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+.weui-cell{
+  display: flex;
+  margin-top: 40rpx;
+}
+.weui-label{
+  font-weight: 600;
+}
+.line{
+  margin-top: 30rpx;
+  background: #cecfcd;
+  width: 90%;
+  height: 3rpx;
+}
+
+.left{
+  margin-left: 20rpx;
+  margin-top: 40rpx;
+}
+.add-address{
+  position: fixed;
+  bottom:0;
+  width: 92%;
+  margin-left: 9rpx;
+  border-radius: 10rpx;
+  height: 90rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.add-address .txt{
+  width: 100vw;
+  height: 75rpx;
+  margin-bottom: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-origin: 5rpx;
+  font-size: 30rpx;
+  background-image: linear-gradient(to right, rgb(90, 156, 255),rgb(90, 156, 255));
+}

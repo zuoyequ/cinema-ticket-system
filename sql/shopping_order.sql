@@ -1,0 +1,5 @@
+INSERT INTO `shopping_order` (`id`, `userid`, `shoppingid`, `count`, `address_id`, `address`, `ordertime`, `orderstate`, `isDefault`, `isBuy`) VALUES (1, 1, 1, 4, 1, '阳春路', '13:40', '已发货', 'false', '已收货');
+INSERT INTO `shopping_order` (`id`, `userid`, `shoppingid`, `count`, `address_id`, `address`, `ordertime`, `orderstate`, `isDefault`, `isBuy`) VALUES (2, 1, 3, 5, 1, NULL, NULL, NULL, 'false', '待确认');
+INSERT INTO `shopping_order` (`id`, `userid`, `shoppingid`, `count`, `address_id`, `address`, `ordertime`, `orderstate`, `isDefault`, `isBuy`) VALUES (3, 1, 2, 4, 1, NULL, NULL, NULL, 'false', '已收货');
+INSERT INTO `shopping_order` (`id`, `userid`, `shoppingid`, `count`, `address_id`, `address`, `ordertime`, `orderstate`, `isDefault`, `isBuy`) VALUES (4, 1, 4, NULL, 1, NULL, NULL, NULL, 'false', '待确认');
+INSERT INTO `shopping_order` (`id`, `userid`, `shoppingid`, `count`, `address_id`, `address`, `ordertime`, `orderstate`, `isDefault`, `isBuy`) VALUES (5, 1, 2, NULL, 1, NULL, NULL, NULL, 'false', 'false');

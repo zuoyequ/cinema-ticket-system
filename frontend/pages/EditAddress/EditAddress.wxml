@@ -1,0 +1,45 @@
+<!--pages/addAddress/addAddress.wxml-->
+<view class="weui-cells">
+  <form bindsubmit="clickedit" wx:for="{{get_address1}}" data-id="{{id}}">
+    <view class="weui-cell">
+    
+    <view class="weui-label">姓名</view>
+    <view class="weui-cell-bd" style="margin-left: 127rpx;">
+      <input class="weui-input" name="name" placeholder="{{item.name}}" value="{{item.name}}" bindinput="inputName"/>
+    </view>
+  </view>
+  <view class="line"></view>
+  <view class="weui-cell">
+    <view class="weui-label">手机号</view>
+    <view class="weui-cell-bd" style="margin-left: 94rpx;">
+      <input class="weui-input" name="telephone" placeholder="{{item.telephone}}" value="{{item.telephone}}" bindinput="inputMobile"/>
+    </view>
+  </view>
+  <view class="line"></view>
+  <view class="weui-cell">
+    <view class="weui-label">所在地址</view>
+    <view style="margin-left: 60rpx; color: #7c7c7c;">
+      <picker mode="region" name="street" bindchange="bindRegionChange">
+        <view>{{address.city.length>0?address.city:'请选择收货地址'}}</view>
+      </picker>
+    </view>
+  </view>
+  <view class="line"></view>
+  <view class="weui-cell">
+    <view class="weui-label">详细地址</view>
+    <view class="weui-cell-bd" style="margin-left: 60rpx;">
+      <input class="weui-input" name="address" placeholder="需要具体到街道、门牌号等" value="{{item.address}}" bindinput="inputSreet"/>
+    </view>
+  </view>
+<view class="left" bind:tap="clickDefault" data-index="{{index}}">
+  <icon type="{{address.isDefault?'success':'circle'}}" size="15"/>    设为默认地址
+</view>
+<view class="edit-address">
+<button class="txt" type="primary"  form-type="submit" >修改并保存</button>
+</view>
+  </form>
+  </view>
+
+
+
+

@@ -1,0 +1,204 @@
+/* pages/Introduction/Introduction.wxss */
+.head{
+  display: flex;
+  height: 360rpx;
+  margin-right: 30rpx;
+}
+.img{
+  margin-left: 30rpx;
+}
+.img1{
+  width: 100%; 
+  border-radius: 10rpx;
+  height: 100%;
+}
+.right{
+  margin-left: 20rpx;
+}
+.huang{
+  color: rgb(221, 218, 26); 
+  font-size: 30rpx;
+  margin-top: 40rpx;
+}
+.body{
+  display: flex;
+  flex-direction: column;
+}
+.aiguo{
+  display: flex;
+}
+.aiguo image{
+  margin-left: -10rpx;
+  width: 50%;
+  height: 50%;
+}
+.mid{
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-top: 40rpx;
+  background: -webkit-linear-gradient(top,rgb(99, 152, 231),rgb(78, 182, 241));
+  height: 220rpx;
+  border-radius: 10rpx;
+  display: flex;
+}
+.pingfen{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+.t1{
+  margin-top: 25rpx;
+  color: white;
+  font-size: 25rpx;
+  align-self: center;
+}
+
+.t2{
+  align-self: center;
+  color: rgb(255, 208, 0);
+  font-size: 50rpx;
+  font-weight: 700;
+  margin-top: 25rpx;
+}
+.t3{
+  margin-top: 30rpx;
+  color: white;
+  font-size: 25rpx;
+  align-self: center;
+}
+.percent{
+  width: 60%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+}
+.renshu{
+  height: 50rpx;
+}
+.renshu text{
+  font-size: 20rpx;
+  color: white;
+  margin-top: 30rpx;
+  margin-left: 150rpx;
+}
+.xping{
+  height: 140rpx;
+  display: flex;
+  flex-direction: row;
+}
+.xxx{
+  margin-top: 10rpx;
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.ccc progress{
+  margin-top: 21rpx;
+}
+.xxx image{
+  width: 105rpx;
+}
+
+.special{
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+.wenzi{
+  margin-left: 45rpx;
+}
+.zhanshou{
+  font-size: 30rpx;
+  margin-top: 16rpx;
+  margin-left: 550rpx;
+  color: rgb(156, 156, 156);
+}
+.view_jianjie{
+  margin-left: 30rpx;
+  width: 630rpx;
+  padding-left: 20rpx;
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #333;
+  line-height: 45rpx;
+  display: -webkit-box;
+  -webkit-box-orient:vertical;
+  text-overflow: ellipsis;
+   overflow:hidden; /*通过以上四行实现收缩功能 */
+}
+.xiala_btn{
+  margin-top: -55rpx;
+  text-align: right;
+  display: flex;
+}
+.xiala_btn image{
+  margin-right: 20rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+.xiala {
+  width: 20rpx;
+  height: 12rpx;
+  padding: 5rpx;
+}
+/* 展开收缩 */
+.ellipsis{
+  -webkit-line-clamp:3; 
+}
+.unellipsis{
+  -webkit-line-clamp:0;  /*全部显示*/
+}
+.yanyuan{
+  margin-top: 20rpx;
+}
+.ccc{
+  display: flex;
+  flex-direction: column;
+}
+.ccc text{
+  align-self: center;
+}
+.tup{
+  margin-top: 30rpx;
+}
+
+.scoll-view{
+  margin-top: 20rpx;
+  margin-left: 35rpx;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.scoll-view view{
+  display: inline-block;
+  margin: 0 20rpx;
+}
+.scoll-view image{
+  width: 360rpx;
+  height: 310rpx;
+  border-radius: 12rpx;
+}
+.ccc text{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.txt1{
+  font-size: 35rpx; 
+  font-weight: 600;
+}
+.txt2{
+  font-size:30rpx ;
+}
+
+.buyBtn{
+  margin-top: 40rpx;
+  height: 130rpx;
+}
+.buyBtn button{
+  color: white;
+  background-color: rgb(96, 163, 240);
+  width: 94%;
+  border-radius: 50rpx;
+}

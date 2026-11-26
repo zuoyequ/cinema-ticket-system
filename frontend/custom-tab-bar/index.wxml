@@ -1,0 +1,7 @@
+<view class="tab-bar">
+<view class="tab-bar-border"></view>
+<View wx:for="{{selectList}}" wx:key="index" class="tab-bar-item" data-path="{{item.pagePath}}" data-selected="{{item.selected}}" data-index="{{index}}" bindtap="swichTo">
+<image class="cover-image" src="{{selected === item.selected ? item.selectedIconPath : item.iconPath}}"></image>
+<VIEW class="cover-view" style="color:{{selected === item.selected ? selectedColor : color}}">{{item.text}}</VIEW>
+</View>
+</view>

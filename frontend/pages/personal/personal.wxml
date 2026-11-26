@@ -1,0 +1,60 @@
+<!--pages/personal/personal.wxml-->
+<view class="all" wx:for="{{chaxun1}}">
+  <view class="top">
+    <view class="kong"></view>
+    <image src="{{image}}" class="im1" bind:tap="changeImg"/>
+    <view class="top-txt"><text>点击编辑头像</text></view>
+  </view>
+  <view class="body1">
+    <view>
+      <view class="qianm">
+        <text>签名</text>
+        <text class="fenge">|</text>
+        <view class="fenge-txt"><text style="margin-left: 30rpx;color: {{x==1?'#999':'black'}};">{{x==1?'编辑个签，展示我的独特态度':qianm}}</text></view>
+        <view wx:if="{{isShow}}" bind:tap="inputEdit"><image src="/icon/xiangyou2.png"/></view>
+      </view>
+    </view>
+  </view>
+  <view class="body2">
+    <view class="qianm">
+        <text>昵称</text>
+        <text class="fenge">|</text>
+        <view class="fenge-txt"><text style="margin-left: 30rpx">{{item.username}}</text></view>
+        <view wx:if="{{isShow}}" bind:tap="inputEdit2"><image src="/icon/xiangyou2.png"/></view>
+      </view>
+      <view class="qianm">
+        <text>性别</text>
+        <text class="fenge">|</text>
+        <view class="fenge-txt"><text style="margin-left: 30rpx;">{{item.gender}}</text></view>
+        <view wx:if="{{isShow}}" bind:tap="changeGender"><image src="/icon/xiangyou2.png"/></view>
+      </view>
+      <view class="qianm">
+        <text>生日</text>
+        <text class="fenge">|</text>
+        <view class="fenge-txt"><text style="margin-left: 30rpx;">{{item.birth}}</text></view>
+        <view wx:if="{{isShow}}" bind:tap="inputEdit3"><image src="/icon/xiangyou2.png"/></view>
+      </view>
+  </view>
+  <view class="body3">
+    <view class="qianm">
+      <text>住处</text>
+      <text class="fenge">|</text>
+      <view class="fenge-txt"><text style="margin-left: 30rpx">{{item.address}}</text></view>
+      <view wx:if="{{isShow}}" bind:tap="inputEdit4"><image src="/icon/xiangyou2.png"/></view>
+    </view>
+    <view class="qianm">
+      <text>邮箱</text>
+      <text class="fenge">|</text>
+      <view class="fenge-txt"><text style="margin-left: 30rpx;">{{item.email}}</text></view>
+      <view wx:if="{{isShow}}" bind:tap="inputEdit5"><image src="/icon/xiangyou2.png"/></view>
+    </view>
+    <view class="qianm">
+      <text>职业</text>
+      <text class="fenge">|</text>
+      <view class="fenge-txt"><text style="margin-left: 30rpx;">{{item.work}}</text></view>
+      <view wx:if="{{isShow}}" bind:tap="inputEdit6"><image src="/icon/xiangyou2.png"/></view>
+    </view>
+  </view>
+  <button wx:if="{{changeStyle==0}}" class="btn" bind:tap="edit">编辑信息</button>
+  <button wx:if="{{changeStyle==1}}" class="btn" bind:tap="save">保存信息</button>
+</view>

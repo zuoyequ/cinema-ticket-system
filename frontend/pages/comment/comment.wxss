@@ -1,0 +1,174 @@
+/* pages/comment/comment.wxss */
+.head{
+  display: flex;
+  height: 360rpx;
+  margin-right: 30rpx;
+}
+.img{
+  margin-left: 30rpx;
+}
+.img1{
+  width: 100%; 
+  border-radius: 10rpx;
+  height: 100%;
+}
+.right{
+  margin-left: 20rpx;
+}
+.huang{
+  color: rgb(221, 218, 26); 
+  font-size: 30rpx;
+  margin-top: 40rpx;
+}
+.Mname{
+  display: flex;
+  margin-bottom: -30rpx;
+}
+.fenshu{
+  display: flex;
+  flex-direction: column;
+  margin-left: 60rpx;
+}
+.body{
+  display: flex;
+  flex-direction: column;
+}
+.aiguo{
+  display: flex;
+}
+.aiguo image{
+  margin-left: -10rpx;
+  width: 50%;
+  height: 50%;
+}
+.blue{
+  width: 400rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+  background: -webkit-linear-gradient(top,rgb(99, 152, 231),rgb(78, 182, 241));
+}
+.pingfen{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+.percent{
+  width: 60%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+}
+.renshu{
+  height: 50rpx;
+  margin-left: 11rpx;
+}
+.renshu text{
+  font-size: 20rpx;
+  color: white;
+  margin-top: 30rpx;
+}
+.xping{
+  height: 140rpx;
+  display: flex;
+  flex-direction: row;
+}
+.xxx{
+  margin-left: 20rpx;
+  margin-top: 6rpx;
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.ccc progress{
+  margin-left: 47rpx;
+  margin-top: 21rpx;
+}
+.xxx image{
+  width: 105rpx;
+}
+.top{
+  display: flex;
+  margin-left: 35rpx;
+  margin-top: 30rpx;
+}
+.top text{
+  font-size: 35rpx;
+  font-weight: 600;
+}
+.top select{
+  width: 260rpx;
+  margin-left: 290rpx;
+  margin-top: -40rpx;
+}
+.list{
+  margin-left: 30rpx;
+  background-color: rgb(240, 240, 240);
+  width: 92%;
+  border-radius: 20rpx;
+  height: auto;
+  margin-top: 10rpx;
+  
+}
+
+.right2{
+  display: flex; 
+  flex-direction: column;
+  margin-left: 40rpx;
+  margin-top: 10rpx;
+}
+.head2{
+  margin-left: 40rpx;
+  display:flex;
+  flex-direction: row;
+}
+.yhImg{
+  margin-top: 20rpx;
+}
+.yhImg image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+}
+.pingxing{
+  margin-left: 40rpx;
+  margin-top: 5rpx;
+}
+
+.items .starbox text {
+  font-size: 26rpx;
+  color: #666;
+  margin-right: 30rpx;
+}
+.starImage {
+  width: 38rpx;
+  height: 36rpx;
+  margin-right: 1rpx;
+}
+.body2{
+  margin-left: 40rpx;
+  margin-top: 10rpx;
+}
+.body2 text{
+  font-size: 30rpx;
+}
+.logo{
+  margin-top: 10rpx;
+  display: flex;
+  margin-left: 480rpx;
+}
+.logo image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 12rpx;
+}
+.pfBtn{
+  height: 140rpx;
+}
+.pfBtn button{
+  width: 94%;
+  margin-top: 35rpx;
+  background-color: rgb(90, 156, 255);
+  border-radius: 50rpx;
+  color: white;
+}

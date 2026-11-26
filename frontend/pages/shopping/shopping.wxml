@@ -1,0 +1,79 @@
+<view class="all">
+  <view class="sousuo">
+    <view class="searchbox">
+      <view class="page">
+        <view class="page-top {{open ? 'page-top-show' : ''}}">
+          <view class="nav-list" wx:for-items="{{nav_list}}" wx:key="url" data-title="{{item}}" bindtap="open_list">
+            <text>{{item}}</text>
+          </view>
+        </view>
+        <view class="page-bottom">
+          <image class="off-nav-list" bindtap="off_canvas" src="/icon/xiangyou2.png"></image>
+          <view class="page-mask {{open ? '' : 'page-mask-hide'}}" bindtap="off_canvas"></view>
+        </view>
+      </view>
+      <input placeholder="请输入搜索" bindinput="getInput" value="{{val}}"></input>
+      <icon type="search" wx:if="{{isSearch}}"/>
+      <icon type="clear" wx:if="{{isClear}}" bind:tap="clearTap"/>
+    </view>
+    <image src="/icon/gouw.png" mode="aspectFit" class="gouw" bind:tap="shoppingcart" data-id="{{id}}"/>
+  </view>
+  <view class="low">
+    <view class="left">
+      <image src="/icon/shandian.jpg" mode="aspectFit" class="shan"/>
+      <text style="font-weight: 600; font-size: 35rpx;">低价秒杀</text>
+      <text style="font-size: 29rpx; color: rgb(206, 206, 206);">限时限量</text>
+    </view>
+    <view class="scrol">
+      <scroll-view scroll-x="true" class="scoll-view">
+        <view class="ccc"><image src="/icon/zhishan.jpg" mode="aspectFit" /><text>￥22.9</text></view>
+        <view class="ccc"><image src="/icon/wudihaoke.jpg" mode="aspectFit"/><text>￥49.9</text></view>
+        <view class="ccc"><image src="/icon/heibao.jpg" mode="aspectFit"/><text>￥59.9</text></view>
+        <view class="ccc"><image src="/icon/wanju1.jpg" mode="aspectFit"/><text>￥37.9</text></view>
+        <view class="ccc"><image src="/icon/shouban1.jpg" mode="aspectFit"/><text>￥42.9</text></view>
+      </scroll-view>
+    </view>
+  </view>
+  <view class="midden" >
+    <view class="block1">
+      <view class="mod1" wx:for="{{get_shopping}}" data-title="{{item}}" >
+        <view wx:if="{{item.id%2==1&&chose==1}}">
+          <image src="{{item.url}}" mode="widthFix" data-name="{{item.name}}" data-id="{{id}}" bind:tap="proDetail"/>
+          <text>{{item.name}}</text>
+          <view>
+            <text>￥{{item.price}}</text>
+            <text class="txt2">VIP ￥{{item.vip}}</text>
+          </view>
+        </view>
+        <view wx:elif="{{item.id%2==1&&chose!=1&&item.category==chose}}">
+          <image src="{{item.url}}" mode="widthFix" data-name="{{item.txt}}" data-id="{{id}}" bind:tap="proDetail"/>
+          <text>{{item.txt}}</text>
+          <view>
+            <text>￥{{item.price}}</text>
+            <text class="txt2">VIP ￥{{item.vip}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="block2">
+      <view class="mod1" wx:for="{{get_shopping}}">
+        <view wx:if="{{item.id%2==0&&chose==1}}">
+          <image src="{{item.url}}" mode="widthFix"  data-name="{{item.name}}"data-id="{{id}}" bind:tap="proDetail"/>
+          <text>{{item.name}}</text>
+          <view>
+            <text>￥{{item.price}}</text>
+            <text class="txt2">VIP ￥{{item.vip}}</text>
+          </view>
+        </view>
+        <view wx:elif="{{item.id%2==0&&chose!=1&&item.category==chose}}">
+          <image src="{{item.url}}" mode="widthFix" data-name="{{item.name}}" data-id="{{id}}" bind:tap="proDetail"/>
+          <text>{{item.name}}</text>
+          <view>
+            <text>{{item.price}}</text>
+            <text class="txt2">{{item.vip}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,122 @@
+/* pages/platformManager/platformManager.wxss */
+.tab{
+  display: flex;
+  justify-content: space-around;
+  height: 80rpx;
+  align-items: center;
+  font-size: 30rpx;
+  background-color: white;
+  margin-top: 10px;
+}
+.one{
+  box-shadow: #000000 0 0 5rpx;
+  border-radius: 10rpx;
+}
+.p{
+  margin-left: 10rpx;
+  display: flex;
+  margin-top: 10rpx;
+  border-radius: 10rpx;
+}
+.p1{
+  margin-left: 43rpx;
+  display: flex;
+  margin-top: 15rpx;
+  border-radius: 10rpx;
+}
+.left{
+  display: flex;
+  flex-direction: column;
+  margin-left: 30rpx;
+}
+.page-section2{
+  width: 500rpx;
+  margin-top: 20rpx;
+}
+radio .wx-radio-input {
+  width: 35rpx;
+  height: 35rpx;
+  border-radius: 50%;
+  border: 2rpx solid #000;
+  background: transparent;
+}
+.p text{
+  margin-left: 20rpx;
+  justify-content: center;
+  align-items: center;
+}
+.shopType{
+  border: 1rpx solid #999;
+  box-shadow: #000000 0 0 5rpx;
+  border-radius: 10rpx;
+  margin-left: 20rpx;
+}
+radio .wx-radio-input.wx-radio-input-checked {
+  width: 35rpx;
+  height: 35rpx;
+  border: 2rpx solid #000;
+  background-color: white !important;/*外圈边框与内圈实心圆间的内容的颜色，不设置就默认是上面的绿色*/
+}
+radio .wx-radio-input.wx-radio-input-checked::before {
+  width: 35rpx;
+  height: 35rpx;
+  border-radius: 50%;
+  /* 圆角 */
+  width: 20rpx;
+  /* 选中后对勾大小，不要超过背景的尺寸 */
+  height: 20rpx;
+  /* 选中后对勾大小，不要超过背景的尺寸 */
+  line-height: 20rpx;
+  text-align: center;
+  font-size: 0rpx;
+  /* 对勾大小 30rpx */
+  color: transparent;
+  /* 对勾颜色 白色 */
+  background: #000;
+  transform: translate(-50%, -50%) scale(1);
+}
+.loadImg{
+  border: 5rpx solid #999;
+  width: 200rpx;
+  height: 230rpx;
+  border-radius: 20rpx;
+  margin-left: 40rpx;
+  margin-top: 20rpx;
+}
+.loadImg image{
+  width: 200rpx;
+  height: 230rpx;
+}
+.loadImg text{
+  color: #999;
+  font-size: 27rpx;
+}
+.two{
+  width: 120rpx;
+  margin-left: 45rpx;
+  margin-top: -50rpx;
+}
+.comment{
+  border: 4rpx solid #999;
+  border-radius: 20rpx;
+  margin-left: 30rpx;
+}
+.page-section{
+  margin-top: 20rpx;
+}
+.load{
+  margin-top:20rpx;
+}
+.jianjie{
+  margin-top: 20rpx;
+}
+.jianjie textarea{
+  margin-top: 10rpx;
+}
+.btn{
+  background-color: rgb(90, 156, 255);
+  color: white;
+  width: 92%;
+  margin-left: 20rpx;
+  margin-top: 30rpx;
+}

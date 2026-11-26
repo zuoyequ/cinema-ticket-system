@@ -1,0 +1,78 @@
+<!--pages/address/address.wxml-->
+<view class="order-notifications" wx:if="{{notifications.length}}">
+  <view class="notification-title">订单通知</view>
+  <view class="notification-message" wx:for="{{notifications}}" wx:key="orderId">{{item.message}}</view>
+</view>
+<view class="shop-list">
+  <view class="head">
+    <image src="/icon/dingdan2.jpg"/>
+    <view class="ding">
+      <text>我的订单</text>
+      <text class="guanli" wx:if="{{active==0 && shopping_order.length}}" bind:tap="edit">管理</text>
+    </view>
+  </view>
+  <view class="line"></view>
+  <view class="line2"></view>
+
+  <view class="tab">
+    <view class="tab-item" wx:for="{{tab}}" wx:key="id" bind:tap="changetab" data-index="{{index}}" style="color: {{item.isclick==true?'black':'#999'}}">{{item.name}}</view>
+  </view>
+
+  <view style="display: {{active==0?'block':'none'}}">
+    <view wx:if="{{isOpen==false}}">
+      <view class="shop-item" wx:for="{{shopping_order}}">
+        <view class="item-image"><image src="{{item.url}}"/></view>
+        <view class="item-detail">
+          <text class="t1">{{item.name}}</text>
+          <text class="t2">{{item.street}}{{item.address}}</text>
+          <text class="te">电话：{{item.telephone}}</text>
+        </view>
+        <view class="item-price">
+          <view class="t3"><text>{{item.isBuy}}</text></view>
+          <view class="t4"><text>￥{{item.price}}</text></view>
+        </view>
+      </view>
+    </view>
+
+    <view wx:if="{{isOpen==true}}" wx:for="{{shopping_order}}">
+      <view class="shop-item" >
+        <view class="point" bind:tap="clickDefault" data-res1="{{shopping_order}}" data-index="{{index}}"><icon type="{{item.isDefault?'success':'circle'}}" size="20"/></view>
+        <view class="item-image2"><image src="{{item.url}}"/></view>
+        <view class="item-detail2">
+          <text class="t1">{{item.name}}</text>
+          <text class="t2">{{item.address}}</text>
+          <text class="te">电话：{{item.telephone}}</text>
+        </view>
+      </view>
+      <view class="bottom">
+        <view class="delete"><text>删除</text></view>
+        <button class="btn1">申请售后</button>
+        <button class="btn2" bind:tap="shouhuo" data-id="{{indexx}}">确认收货</button>
+        <button class="btn3" bind:tap="trunFalse">确定</button>
+      </view>
+    </view>
+  </view>
+
+  <view class="order-empty" wx:if="{{active==0 && !shopping_order.length}}">暂无商品订单</view>
+  <view wx:if="{{active==1}}">
+    <view class="order-empty" wx:if="{{ticketLoading}}">正在加载影票订单…</view>
+    <view class="order-empty" wx:elif="{{ticketError}}">{{ticketError}}<button size="mini" bindtap="loadOrders">重试</button></view>
+    <view class="order-empty" wx:elif="{{!ticketList.length}}">暂无影票订单，选座购票后可在这里查看</view>
+    <view wx:else>
+      <view class="shop-item ticket-item" wx:for="{{ticketList}}" wx:key="id">
+        <view class="item-image"><image src="{{item.url}}" mode="aspectFill"/></view>
+        <view class="item-detail">
+          <text class="moive-t1">{{item.name}}</text>
+          <text class="moive-t2">{{item.area}}</text>
+          <text class="moive-t2">{{item.date}}</text>
+          <text class="moive-te">{{item.seat}}</text>
+          <text class="ticket-order-id">订单 #{{item.id}}</text>
+        </view>
+        <view class="item-price">
+          <view class="t3">{{item.isBuy}}</view>
+          <view class="t4">￥{{item.price}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

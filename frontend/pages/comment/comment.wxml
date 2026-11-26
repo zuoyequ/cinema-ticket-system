@@ -1,0 +1,82 @@
+<view>  
+  <view class="head" wx:for="{{get_movie_comment}}">
+    <view class="img">
+      <image class="img1" src="/icon/13 (2).jpg" mode="heightFix"/>
+    </view>
+    <view class="right">
+      <view class="Mname">
+        <text style="font-size: 40rpx; font-weight: 600;">{{item.movie_name}}</text>
+        <view class="fenshu">
+          <text style="font-size: 20rpx;color: rgb(174, 177, 179);">{{item.score_name}}</text>
+          <text style=" align-self: center;color: rgb(255, 208, 0);font-size: 40rpx;font-weight: 700;">{{item.score}}</text>
+        </view>
+      </view>
+      <view class="body">
+        <text style="font-size: 25rpx;">{{item.english_name}}</text>
+      </view>
+      <view class="aiguo">
+        <image src="/icon/xiangkan.png" mode="widthFix"/>
+        <image src="/icon/kanguo.png" mode="widthFix"/>
+      </view>
+      <view class="blue">
+        <view class="percent">
+          <view class="renshu">
+            <text>{{item.number}}</text>
+          </view>
+          <view class="xping">
+            <view class="xxx">
+              <image src="/icon/5x.png" mode="aspectFit" />
+              <image src="/icon/4x.png" mode="aspectFit" />
+              <image src="/icon/3x.png" mode="aspectFit" />
+              <image src="/icon/2x.png" mode="aspectFit" />
+              <image src="/icon/1x.png" mode="aspectFit" />
+            </view>
+            <view class="ccc">
+              <progress percent="70" color="white" active stroke-width="3" style="width: 185rpx;"></progress>
+              <progress percent="19" color="white" active stroke-width="3" style="width: 185rpx;"></progress>
+              <progress percent="8" color="white" active stroke-width="3" style="width: 185rpx;"></progress>
+              <progress percent="2" color="white" active stroke-width="3" style="width: 185rpx;"></progress>
+              <progress percent="1" color="white" active stroke-width="3" style="width: 185rpx;"></progress>
+            </view>  
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="pinglun">
+    <view class="top">
+      <text>用户评论</text>
+      <select selectData='{{selectData}}'></select>
+    </view>
+    <view class="list"  wx:for="{{get_movie_comment1}}">
+      <view class="head2">
+        <view class="yhImg"> 
+          <image src="/icon/7.jpg" mode="aspectFill"/>
+        </view>
+        <view class="right2">
+          <text style="font-weight: 600;">{{item.yonghu_name}}</text>
+          <text style="color: rgb(178, 180, 184); font-size: 29rpx; margin-top: 10rpx;">2024-3-12</text>
+        </view>
+      </view>
+      <view class="pingxing">
+        <block wx:for="{{item.star}}" wx:key='index'>
+          <image class="starImage" src="/icon/huangxing.png"></image>
+        </block>
+        <block wx:for="{{5-item.star}}" wx:key='index'>
+          <image class="starImage" src="/icon/heixing.png"></image>
+        </block>
+      </view>
+      <view class="body2">
+        <text>{{item.pinjia}}</text>
+      </view>
+      <view class="logo">
+        <image src="/icon/dianzan.png" mode="aspectFill"/>
+        <image src="/icon/bishi.png" mode="aspectFill"/>
+        <image src="/icon/qipao (2).png" mode="aspectFill"/>
+      </view>
+    </view>
+  </view>
+  <view class="pfBtn">
+    <button bind:tap="gotoStar" data-index="{{index}}">参与评论</button>
+  </view>
+</view>

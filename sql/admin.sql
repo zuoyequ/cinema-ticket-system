@@ -1,0 +1,1 @@
+INSERT INTO `admin` (`id`, `username`, `birth`, `email`, `telephone`, `user`, `password`, `type`, `state`, `address`, `gender`, `work`) VALUES (1, '王总', '2004-9-5', '154884855@qq.com', '15454785658', '154875487', '123456', 3, '1', '小小号', '男', '管理员');

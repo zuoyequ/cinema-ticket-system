@@ -1,0 +1,76 @@
+/* pages/personal/personal.wxss */
+.all{
+  height: 1300rpx;
+  background-color: rgb(236, 236, 236);
+}
+.im1{
+  height: 180rpx;
+  width: 180rpx;
+  border-radius: 190rpx;
+ 
+  margin-left: 260rpx;
+
+  display: flex;
+  flex-direction: column;
+}
+.top{
+  background-color: #3c96f3;
+  height: 360rpx;
+}
+.kong{
+  background-color: #3c96f3;
+  height: 40rpx;
+}
+.top-txt{
+  margin-top: 20rpx;
+  margin-left: 255rpx;
+  color: rgb(82, 81, 81);
+}
+.body1{
+  background-color: white;
+  width: 92%;
+  margin-left: 30rpx;
+  height: 100rpx;
+  border-radius: 30rpx;
+  margin-top: -45rpx;
+}
+.body2{
+  background-color: white;
+  width: 92%;
+  margin-left: 30rpx;
+  height: 270rpx;
+  border-radius: 30rpx;
+  margin-top: 20rpx;
+}
+.body3{
+  background-color: white;
+  width: 92%;
+  margin-left: 30rpx;
+  height: 270rpx;
+  border-radius: 30rpx;
+  margin-top: 20rpx;
+}
+.qianm{
+  padding-left: 30rpx;
+  padding-top: 30rpx;
+  display: flex;
+}
+.fenge{
+  margin-left: 20rpx;
+}
+.fenge-txt{
+  width: 515rpx;
+}
+.qianm image{
+  width: 30rpx;
+  height: 45rpx;
+}
+
+.btn{
+  width: 92%;
+  margin-left: 30rpx;
+  background-color: #3c96f3;
+  color: white;
+  margin-top: 50rpx;
+  border-radius: 40rpx;
+}

@@ -1,0 +1,31 @@
+<view class="all"  wx:for="{{get_movie_comment}}">
+  <view class="img">
+    <image src="/icon/13 (2).jpg" mode="heightFix"/>
+  </view>
+  <view class="pf">
+    <text class="t1">{{item.movie_name}}</text>
+    <text class="t2">评分</text>
+    <view class="xx">
+      <block wx:for='{{scoreArray}}' wx:key='item' ><!-- 遍历评分列表 -->
+      <!-- 设置触摸事件和点击事件为同一个方法,否则点击却不滑动的话,不触发事件 -->
+      <view class='starLen' bindtouchmove='changeScore'  bindtap='changeScore' >
+        <!-- 使用三目运算符来动态变化显示的是哪张图片,score是js中的分数,index是scoreArray的下标 -->
+        <!-- src部分可以这样写 src="{{score>index?'../../images/fullStar.png':'../../images/nullStar.png'}}"  ，这样可以在js文件把fullStarUrl和nullStarUrl去掉 -->
+        <image class='star' src="{{score>index?fullStarUrl:nullStarUrl}}" />    
+      </view>
+      </block>
+    </view>
+  </view>
+</view>
+<view class="line"></view>
+<form bindsubmit="submit"  wx:for="{{get_movie_comment}}">
+<view class='reviews'>
+  <textarea placeholder='请写出你对此电影的看法~（评价在100字以内）' value="{{pinglun}}" name="pinglun"></textarea>
+</view>
+<view hidden >编号:<input type="text" name="id" value="{{item.id}}" /></view>
+<view hidden >电影名字:<input type="text" name="movie_name" value="{{item.movie_name}}" /></view>
+<view hidden >星级:<input type="text" name="star" value="{{score}}" /></view>
+<view class="pfBtn">
+  <button type="primary" form-type="submit">发表评论</button>
+</view>
+</form>

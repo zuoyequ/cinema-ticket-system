@@ -1,0 +1,9 @@
+{
+  
+  "navigationBarTitleText": "购票",
+  "disableScroll": true,
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "navigation-bar": "/components/navigation-bar/navigation-bar"
+  }
+}

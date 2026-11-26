@@ -1,0 +1,71 @@
+.all{
+  display: flex;
+}
+.img{
+  display: flex;
+  flex-direction: column;
+  margin-left: 30rpx;
+}
+.img text{
+  font-weight: 600;
+}
+.img image{
+  width: 300rpx;
+  height: 320rpx;
+  border-radius: 20rpx;
+}
+.starLen{
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.star{
+  width:25px;
+  height:25px;
+  vertical-align:text-bottom;
+  display: inline-block;
+}
+
+.scoreContent{
+  margin-left: 80px;
+  display: inline-block;
+}
+.pf{
+  display: flex;
+  flex-direction: column;
+}
+.t1{
+  font-weight: 600;
+}
+.t2{
+  margin-top: 18rpx;
+}
+.pf text{
+  margin-left: 20rpx;
+}
+.xx{
+  margin-left: 30rpx;
+  margin-top: 130rpx;
+}
+.reviews{
+  width: 94%;
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+}
+.line{
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  background: #cac9c9;
+  width: 92%;
+  height: 5rpx;
+}
+.pfBtn{
+  height: 140rpx;
+}
+.pfBtn button{
+  width: 94%;
+  margin-top: 35rpx;
+  background-color: rgb(90, 156, 255);
+  border-radius: 50rpx;
+  color: white;
+}

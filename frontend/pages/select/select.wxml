@@ -1,0 +1,14 @@
+<!--下拉选择框 dropdownlist-->
+<view class='select_box'>
+  <view class='select' catchtap='selectTap'>
+    <text class='select_text'>{{selectData[index]}}</text>
+    <!-- 画的三角形 -->
+    <view class='view-triangle {{show&&"select_img_rotate"}}'></view>
+  </view>
+
+  <view class='option_box' style='height:{{show?(selectData.length>5?300:selectData.length*60):0}}rpx;'>
+    <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this'
+      data-index='{{index}}' catchtap='_optionTap'>{{item}}</text>
+  </view>
+</view>
+<!--下拉选择框-->

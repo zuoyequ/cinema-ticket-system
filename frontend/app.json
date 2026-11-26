@@ -1,0 +1,80 @@
+{
+  "pages": [
+    "pages/main/main",
+    "pages/personal/personal",
+    "pages/work-index/work-index",
+    "pages/me3/me3",
+    "pages/me/me",
+    "pages/me2/me2",
+    "pages/shopping/shopping",
+    "pages/order/order",
+    "pages/seat/seat",
+    "pages/buyTicket/buyTicket",
+    "pages/Introduction/Introduction",
+    "pages/start/start",
+    "pages/unity/unity",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/verify/verify",
+    "pages/register/register",
+    "pages/work-index2/work-index2",
+    "pages/work-index3/work-index3",
+    "pages/comment/comment",
+    "pages/select/select",
+    "pages/star/star",
+    "pages/proDetails/proDetails",
+    "pages/address/address",
+    "pages/addAddress/addAddress",
+    "pages/EditAddress/EditAddress",
+    "pages/shopping-cart/shopping-cart",
+    "pages/statistics/statistics",
+    "pages/platformManager/platformManager"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarBackgroundColor": "#ffffff"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#333",
+    "selectedColor": "#007fff",
+    "backgroundColor": "#f5f5f5",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/work-index/work-index",
+        "text": "用户首页",
+        "iconPath": "icon/home.png",
+        "selectedIconPath": "icon/home_.png"
+      },
+      {
+        "pagePath": "pages/unity/unity",
+        "text": "游戏",
+        "iconPath": "icon/work.png",
+        "selectedIconPath": "icon/work_.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "用户我的",
+        "iconPath": "icon/mine.png",
+        "selectedIconPath": "icon/mine_.png"
+      },
+      {
+        "pagePath": "pages/work-index2/work-index2",
+        "text": "会员首页",
+        "iconPath": "icon/home.png",
+        "selectedIconPath": "icon/home_.png"
+      },
+      {
+        "pagePath": "pages/work-index3/work-index3",
+        "text": "管理首页",
+        "iconPath": "icon/home.png",
+        "selectedIconPath": "icon/home_.png"
+      }
+    ]
+  },
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

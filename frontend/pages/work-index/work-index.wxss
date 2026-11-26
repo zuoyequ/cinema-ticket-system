@@ -1,0 +1,286 @@
+/* pages/work-index/work-index.wxss */@charset "UTF-8";
+/**
+ * uni-app内置的常用样式变量
+ */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+page {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: #fff;
+  min-height: 100%;
+  height: auto;
+}
+view {
+  font-size: 14px;
+  line-height: inherit;
+}
+.text {
+  text-align: center;
+  font-size: 26rpx;
+  margin-top: 10rpx;
+}
+.grid-item-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0;
+}
+.uni-margin-wrap {
+  width: 690rpx;
+  width: 100%;
+}
+
+.swi{
+  margin-top: 30rpx;
+  width: 94%;
+  margin-left: 20rpx;
+}
+
+.swiper {
+  height: 300rpx;
+  color: rgb(5, 20, 20);
+}
+.img0{
+  width: 370px;
+  height: 160px;
+  margin-left: 6rpx;
+}
+.img1{
+  width: 310px;
+  height: 155px;
+  margin-left: 10px;
+  margin-top: -35px;
+}
+.img2{
+  width: 290px;
+  height: 150px;
+  margin-left: 10px;
+  margin-top: -30px;
+}
+
+.scrol{
+  width: 94%;
+  margin-left: 20rpx;
+}
+
+.scoll-view{
+  margin-top: 20rpx;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.scoll-view view{
+  display: inline-block;
+  margin: 0 20rpx;
+}
+.scoll-view image{
+  width: 120rpx;
+  height: 130rpx;
+}
+.ccc text{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.reying{
+  height: 440rpx;
+  margin-top: 40rpx;
+  width: 94%;
+  background-color: beige;
+  margin-left: 20rpx;
+}
+
+.daiying{
+  height: 440rpx;
+  margin-top: 40rpx;
+  width: 94%;
+  background-color: rgb(169, 240, 216);
+  margin-left: 20rpx;
+}
+
+.my_priview_md{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.my_priview_md text{
+  font-size: 40rpx;
+  margin-top: 20rpx;
+ margin-left: 20rpx;
+}
+ 
+.my_priview{
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 10rpx;
+}
+ 
+.arrow{
+  margin-top: 20rpx;
+  margin-left: 500rpx;
+  width: 16rpx;
+  height: 16rpx;
+  border-top: 4rpx solid #999;
+  border-right: 4rpx solid #999;
+  /* 旋转45度 */
+  transform: rotate(45deg);
+  right: 30rpx;
+  top: 38rpx;
+}
+.ddd text{
+  display: flex;
+  flex-direction: row;
+  font-size: 30rpx;
+}
+.ddd image{
+  width: 180rpx;
+  height: 240rpx;
+}
+
+.ddd button{
+  /* margin-top: 10rpx;
+  font-size: 27rpx;
+  line-height: 1rpx;
+  text-align: center;
+  width: 20%;
+  border-radius: 40rpx; */
+  margin-top: 5rpx;
+  position: relative;
+  border-radius: 40rpx;
+  font-size: 27rpx;
+  width: 50%;
+  padding: 9rpx;
+  text-align: center;
+}
+.sousuo{
+  display: flex;
+  flex-direction: row;
+}
+.aaa{
+  display: flex;
+  margin-left: 30rpx;
+  width: 180rpx;
+  height: 100rpx;
+}
+.aaa image{
+  width: 120px;
+  height: 80px;
+  padding: 0;
+  margin-top: -20px;
+  margin-left: -25px;
+}
+.searchbox{
+  margin-left: -30rpx;
+  margin-top: 10px;
+  height: 30px;
+  width: 535rpx;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  align-items: center;
+}
+input{
+  margin-left: 20rpx;
+  margin-right: 15px;
+  width: 415rpx;
+}
+.tab{
+  display: flex;
+  justify-content: space-around;
+  height: 80rpx;
+  align-items: center;
+  font-size: 30rpx;
+  background-color: white;
+  margin-top: 10px;
+}
+.content{
+  padding: 15rpx;
+}
+.content_item{
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  padding: 15rpx 0;
+  border-radius: 5%;
+  background-color: rgb(236, 236, 236);
+}
+.content_item2{
+  display: flex;
+  flex-direction: row;
+  height: 240rpx;
+  width: 94%;
+  margin-left: 23rpx;
+  margin-top: 15rpx;
+  padding: 15rpx 0;
+  border-radius: 20rpx;
+  background-color: white;
+}
+.image1{
+  width: 200rpx;
+  height: 210rpx;
+  margin-left: 30rpx;
+  border-radius: 15rpx;
+  margin-top: 15rpx;
+}
+.movieP{
+  width: 590rpx;
+}
+.movieP .mp1{
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+}
+.mp1 text{
+  font-size: 35rpx;
+  font-weight: 900;
+}
+.movieP .mp2{
+  margin-left: 20rpx;
+  margin-top: 13rpx;
+}
+.mp2 text{
+  font-size: 33rpx;
+  font-weight: 300;
+}
+.movieP .mp3{
+  margin-left: 20rpx;
+  margin-top: 13rpx;
+}
+.movieP .mp4{
+  margin-left: 20rpx;
+  margin-top: 13rpx;
+}
+.image2{
+  height: 30%;
+  width: 30%;
+  margin-top: 85rpx;
+  margin-left: -17rpx;
+}
+
+
+
+@media screen and (min-width: 500px) {
+.uni-swiper-dot-box {
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 8px;
+}
+.image {
+    width: 100%;
+}
+}
+

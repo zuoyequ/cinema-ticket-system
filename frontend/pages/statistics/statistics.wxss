@@ -1,0 +1,190 @@
+/* pages/statistics/statistics.wxss */
+.tab{
+  display: flex;
+  justify-content: space-around;
+  height: 80rpx;
+  align-items: center;
+  font-size: 30rpx;
+  background-color: white;
+}
+.seat-choice{
+  background-color: #3c96f3;
+  width: 96%;
+  margin-left: 13rpx;
+  border-radius: 20rpx;
+  display: -webkit-box;
+  -webkit-box-orient:vertical;
+  text-overflow: ellipsis;
+   overflow:hidden;
+}
+.txt{
+  height: 60rpx;
+  margin-top: 20rpx;
+  margin-left: 45rpx;
+  font-size: 35rpx;
+  font-weight: 600;
+}
+.rank{
+  padding-top: 17rpx;
+  padding-left: 35rpx;
+  display: flex;
+}
+.rank text{
+  color: white;
+}
+.t2{
+  margin-left: 15rpx;
+}
+.t3{
+  margin-left: 15rpx;
+  font-size: 27rpx;
+  padding-top: 4rpx;
+}
+.percent{
+  color: white;
+  margin-left: 30rpx;
+  width: 300rpx;
+  padding-top: 5rpx;
+}
+.xiala{
+  width: 40rpx;
+  height: 20rpx;
+  margin-left: 330rpx;
+}
+.ellipsis{
+  -webkit-line-clamp:3; 
+}
+.unellipsis{
+  -webkit-line-clamp:0;  /*全部显示*/
+}
+.piaofang{
+  background-color: #3c96f3;
+  width: 92%;
+  margin-left: 30rpx;
+  height: 400rpx;
+  border-radius: 20rpx;
+}
+.pfs{
+  background-color: white;
+  border-radius: 10rpx;
+  height: 50rpx;
+  width: 90%;
+  margin-left: 30rpx;
+  margin-top: 15rpx;
+}
+.kong{
+  background-color: #3c96f3; 
+  width: 90%;
+  margin-left: 40rpx;
+  height: 10rpx;
+}
+.all{
+  border-radius: 10rpx;
+  width: 96%;
+  margin-left: 13rpx;
+  height: 1900rpx;
+}
+.head{
+  background-color: #ff7f7f;
+  height: 60rpx;
+}
+.w1{
+  color: white;
+  margin-left: 30rpx;
+}
+.w2{
+  color: white;
+  margin-left: 50rpx;
+}
+.w3{
+  color: white;
+  margin-left: 150rpx;
+}
+.w5{
+  color: white;
+  margin-left: 120rpx;
+}
+.w4{
+  color: white;
+  margin-left: 60rpx;
+}
+.kong2{
+  background-color: #ff7f7f;
+  width: 96%;
+  margin-left: 13rpx;
+  height: 6rpx;
+}
+.list{
+  display: flex;
+}
+.body{
+  display: flex;
+  flex-direction: column;
+}
+.h1{
+  width: 110rpx;
+  margin-left: 30rpx;
+  margin-top: 23rpx;
+}
+.h2{
+  width: 110rpx;
+  margin-left: 30rpx;
+  margin-top: 15rpx;
+}
+.body{
+  width: 220rpx;
+  margin-top: 10rpx;
+}
+.b2{
+  font-size: 27rpx;
+  color: #999;
+}
+.p{
+  margin-top: 23rpx;
+  width: 210rpx;
+  margin-left: 15rpx;
+}
+.p2{
+  margin-top: 15rpx;
+  width: 210rpx;
+  margin-left: 30rpx;
+}
+.r{
+  margin-top: 23rpx;
+  margin-left: 30rpx;
+}
+.r2{
+  margin-top: 15rpx;
+  margin-left: 30rpx;
+}
+page {
+  background: #fff;
+}
+.container {
+  width: 96%;
+  margin-top: -180rpx;
+  margin-left: 19rpx;
+}
+.echarts {
+  width: 96%;
+  height: 500rpx;
+}
+ec-canvas {
+  width: 96%;
+  height: 92%;
+}
+.xse{
+  margin-top: -180rpx;
+}
+.container1 {
+  width: 96%;
+  margin-top: -180rpx;
+  margin-left: 19rpx;
+}
+.text1{
+  display: block;/*block	此元素将显示为块级元素，此元素前后会带有换行符。text 为内联元素，而overflow：hidden；作用于块元素上*/
+  white-space: nowrap;/*取消换行*/
+  overflow: hidden;/*超出的部分隐藏*/
+  text-overflow: ellipsis;/*隐藏的部分用省略号代替*/
+
+}

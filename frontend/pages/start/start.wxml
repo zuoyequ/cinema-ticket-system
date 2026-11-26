@@ -1,0 +1,2 @@
+<!--pages/start/start.wxml-->
+<button class="btn" type="primary"  bindtap="gettimetable">开始观看</button>

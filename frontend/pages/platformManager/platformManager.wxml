@@ -1,0 +1,50 @@
+<view class="tab">
+  <view class="tab-item" wx:for="{{tab}}" wx:key="id" bind:tap="changetab" data-index="{{index}}" style="color: {{item.isclick==true?'black':'#999'}}">{{item.name}}</view>
+</view>
+
+<form bindsubmit="submition"  style="display: {{active==0?'block':'none'}}">
+  <view class="left">
+    <view class="p1">影片名：<input type="text" class="one" name="name"/></view>
+    <view class="p">影片类型：<input type="text" class="one" name="type"/></view>
+    <view class="p">影片时长：<input type="text" class="one" name="during"/></view>
+    <view class="page-section">
+      <radio-group bindchange="radioChange" class="form-radio_wrap" style="font-size: 30rpx;" name="choice">
+        <label class="radio" style="margin-left: 10rpx;" wx:for="{{radios}}">
+          <radio value="{{item.value}}" checked="{{item.checked}}"/>{{item.count}}
+        </label>
+      </radio-group>
+    </view>
+    <text class="load">影片封面上传:</text>
+    <view class="loadImg" bind:tap="changeImg" name="image">
+      <image src="{{head}}"/>
+      <view class="two" wx:if="{{cang==1}}" name="image1"><text>上传图片</text></view>
+    </view>
+    <view class="jianjie">
+      <text>作品简介：</text>
+      <textarea placeholder='请输入该电影简介~' value="{{pinglun}}" class="comment" placeholder-class="placeholder" name="jianjie"></textarea>
+    </view>
+    <button class="btn" form-type="submit" data-image="{{image}}">提交上传</button>
+  </view>
+</form>
+
+<form bindsubmit="submition1"  style="display: {{active==1?'block':'none'}}">
+  <view class="left">
+    <view class="p1">商品名：<input type="text" class="one" name="shopname"/></view>
+    <view class="p">商品价格：<input type="text" class="one" name="price"/></view>
+    <view class="p">商品款式：<input type="text" class="one" name="shopStyle"/></view>
+    <view class="p">商品类型:
+      <view name="shopType" bind:tap="send" class="shopType">{{shopType}}</view>
+      <!-- <text name="shopType" bind:tap="send">{{shopType}}</text> -->
+    </view>
+    <text class="load">商品图片上传:</text>
+    <view class="loadImg" bind:tap="changeImg" name="image">
+      <image src="{{head}}"/>
+      <view class="two" wx:if="{{cang==1}}"><text>上传图片</text></view>
+    </view>
+    <view class="jianjie">
+      <text>商品简介：</text>
+      <textarea placeholder='请输入该商品简介~' value="{{pinglun}}" name="shopJ" class="comment" placeholder-class="placeholder"></textarea>
+    </view>
+    <button class="btn" form-type="submit">提交上传</button>
+  </view>
+</form>

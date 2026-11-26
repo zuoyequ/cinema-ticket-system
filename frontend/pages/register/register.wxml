@@ -1,0 +1,23 @@
+<!--pages/register/register.wxml-->
+
+<view>
+  <view class="header">
+    <view class="title">请注册</view>
+    <view class="info">Please Register Your Account</view>
+  </view>
+</view>
+<view>
+  <form bindsubmit="formsubmit">
+    <view class="input1">
+      <input type="text" class="one" name="trName" placeholder="请输入姓名" />
+    <input type="number" class="one" bindinput="inputiphone2" name="telephone" maxlength="11" placeholder="请输入手机号" value="{{strloginUser}}"/>
+    <input password="true" class="one" bindinput="password2" name="password"placeholder="请输入密码" value="{{strloginPassword}}"/>
+  </view>
+  <button class="btn" type="primary"  form-type="submit" >注册</button>
+  </form>
+</view>
+<view>
+  <view class="end">
+    <text bind:tap="denglu">登录用户</text>
+  </view>
+</view>

@@ -1,0 +1,228 @@
+/* pages/order/order.wxss */
+.order-notifications {
+  margin: 24rpx;
+  padding: 24rpx;
+  background: #edf8f3;
+  border-radius: 16rpx;
+  color: #246447;
+}
+.notification-title { font-size: 28rpx; font-weight: bold; margin-bottom: 12rpx; }
+.notification-message { font-size: 24rpx; line-height: 1.8; }
+/* pages/address/address.wxss */
+.address-none{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+.none-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.none-content image{
+  width: 110rpx;
+  height: 110rpx;
+  margin-bottom: 30rpx;
+}
+.none-content .txt{
+  font-size: 26rpx;
+  color: #999;
+}
+.head{
+  display: flex;
+}
+.head image{
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 270rpx;
+}
+.ding{
+  color: #999;
+  margin-top: 10rpx;
+}
+.shop-item{
+  display: flex;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+}
+.tab{
+  display: flex;
+  justify-content: space-around;
+  height: 80rpx;
+  align-items: center;
+  font-size: 30rpx;
+  background-color: white;
+}
+.line{
+  margin-top: 30rpx;
+  background: #cecfcd;
+  width: 90%;
+  height: 3rpx;
+  margin-left: 35rpx;
+}
+.line2{
+  margin-top: 10rpx;
+  background: #cecfcd;
+  width: 90%;
+  height: 3rpx;
+  margin-left: 35rpx;
+}
+.item-image image{
+  width: 160rpx;
+  height: 190rpx;
+  border-radius: 20rpx;
+}
+.item-detail{
+  margin-left: 15rpx;
+  display: flex;
+  flex-direction: column;
+  width: 390rpx;
+}
+.item-image2{
+  margin-left: 20rpx;
+}
+.item-image2 image{
+  width: 160rpx;
+  height: 190rpx;
+  border-radius: 20rpx;
+}
+.item-detail2{
+  margin-left: 15rpx;
+  display: flex;
+  flex-direction: column;
+  width: 420rpx;
+}
+
+.point{
+  margin-top: 65rpx;
+}
+.guanli{
+  margin-left: 175rpx;
+}
+.t1{
+  margin-top: 15rpx;
+  font-size: 30rpx;
+  color: #4f504e;
+}
+.t2{
+  font-size: 27rpx;
+  color: #4f504e;
+  margin-top: 18rpx;
+  display: block;/*block	此元素将显示为块级元素，此元素前后会带有换行符。text 为内联元素，而overflow：hidden；作用于块元素上*/
+  white-space: nowrap;/*取消换行*/
+  overflow: hidden;/*超出的部分隐藏*/
+  text-overflow: ellipsis;/*隐藏的部分用省略号代替*/
+}
+.te{
+  font-size: 27rpx;
+  color: #4f504e;
+  margin-top: 5rpx;
+}
+.item-price{
+  color: #4f504e;
+  margin-left: 25rpx;
+}
+.t3{
+  font-size: 30rpx;
+}
+.t4{
+  margin-top: 35rpx;
+  margin-right: 45rpx;
+  font-size: 28rpx;
+}
+.bottom{
+  width: 92%;
+  margin-left: 30rpx;
+  display: flex;
+  position: fixed;
+  bottom:0;
+  height: 120rpx;
+}
+.delete{
+  margin-top: 8rpx;
+  margin-right: 10rpx;
+}
+.delete text{
+  color: #999;
+  margin-left: 20rpx;
+  font-weight: 600;
+}
+.btn1{
+  width: 30%;
+  height: 75%;
+  margin-top: -15rpx;
+  background-color: rgb(255, 239, 239);
+  color: rgb(255, 61, 27);
+}
+.btn2{
+  width: 30%;
+  height: 75%;
+  margin-top: -15rpx;
+  margin-left: 10rpx;
+  background-color: rgb(255, 61, 27);
+  color: white;
+}
+.btn3{
+  width: 20%;
+  height: 75%;
+  margin-top: -15rpx;
+  background-color: rgb(255, 239, 239);
+  color: rgb(255, 61, 27);
+}
+.moive-t1{
+  font-weight: 600;
+}
+.moive-t2{
+  margin-top: 9rpx;
+  color: #999;
+  font-size: 28rpx;
+}
+.moive-te{
+  margin-top: 9rpx;
+  color: #999;
+  font-size: 28rpx;
+}
+.bottom2{
+  width: 92%;
+
+  display: flex;
+  position: fixed;
+  bottom:0;
+  height: 120rpx;
+}
+.delete{
+  margin-top: 8rpx;
+  margin-right: 10rpx;
+}
+.delete text{
+  color: #999;
+  margin-left: 20rpx;
+  font-weight: 600;
+}
+.btn1{
+  width: 30%;
+  height: 75%;
+  margin-top: -15rpx;
+  background-color: rgb(255, 239, 239);
+  color: rgb(255, 61, 27);
+}
+.btn2{
+  width: 30%;
+  height: 75%;
+  margin-top: -15rpx;
+  margin-left: 10rpx;
+  background-color: rgb(255, 61, 27);
+  color: white;
+}
+.btn3{
+  width: 20%;
+  height: 75%;
+  margin-top: -15rpx;
+  background-color: rgb(255, 239, 239);
+  color: rgb(255, 61, 27);
+}
+
+.order-empty { padding: 70rpx 30rpx; text-align: center; font-size: 28rpx; color: #888; }
+.ticket-order-id { color: #999; font-size: 22rpx; margin-top: 8rpx; }
+.ticket-item { min-height: 250rpx; height: auto; padding-bottom: 20rpx; }

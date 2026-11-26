@@ -1,0 +1,174 @@
+/* pages/shopping/shopping.wxss */
+.all{
+  height: auto;
+  background-color: rgb(250, 250, 250);
+}
+.sousuo{
+  display: flex;
+  flex-direction: row;
+}
+
+.searchbox{
+  margin-left: 30rpx;
+  margin-top: 10px;
+  height: 30px;
+  width: 590rpx;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  align-items: center;
+}
+
+input{
+  margin-left: -100rpx;
+  margin-right: 15px;
+  width: 465rpx;
+}
+.gouw{
+  width: 90rpx;
+  height: 90rpx;
+  margin-top:15rpx;
+  margin-left: 10rpx;
+}
+.low{
+  width: 92%;
+  background-color: white;
+  border-radius: 20rpx;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  height: 250rpx;
+  display: flex;
+}
+.shan{
+  width: 110rpx;
+  height: 110rpx;
+  margin-left:40rpx;
+  margin-top: 28rpx;
+}
+.left{
+  display: flex;
+  flex-direction: column;
+  width: 190rpx;
+}
+.left text{
+  text-align: center;
+}
+.scrol{
+  width: 70%;
+  margin-left: 20rpx;
+}
+
+.scoll-view{
+  margin-top: 20rpx;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.scoll-view view{
+  display: inline-block;
+  margin: 0 20rpx;
+}
+.scoll-view image{
+  width: 170rpx;
+  height: 140rpx;
+  margin-top: 10rpx;
+}
+.ccc text{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 28rpx;
+  font-weight: 600;
+}
+.midden{
+  display: flex;
+  flex-direction: row;
+}
+.block1{
+  width: 45%;
+  height: auto;
+  background-color: white;
+  border-radius: 20rpx;
+  margin-left: 30rpx; 
+}
+.block2{
+  width: 45%;
+  height: auto;
+  background-color: white;
+  border-radius: 20rpx;
+  margin-left: 20rpx;
+}
+.mod1{
+  display: flex;
+  flex-direction: column;
+}
+.txt2{
+  font-size: 20rpx; 
+  color: rgb(255, 184, 30); 
+  margin-left: 30rpx;
+}
+.mod1 text{
+  margin-top: 10rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+.mod1 image{
+  margin-top: 40rpx;
+  width: 100%;
+  border-radius: 20rpx;
+}
+/* pages/aaa/aaa.wxss */
+.page {
+  height: 100%;
+  width: 20%;
+  font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
+}
+/*左侧导航  */
+.page-top{
+  position: fixed;
+  width: 75%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: white;
+  transform: rotate(0deg) scale(1) translate(-100%,0%); 
+  -webkit-transform: rotate(0deg) scale(1) translate(-100%,0%); 
+  transition: all 0.4s ease;
+  z-index: 998;
+}
+.page-top-show{
+  transform: rotate(0deg) scale(1) translate(0%,0%); 
+  -webkit-transform: rotate(0deg) scale(1) translate(0%,0%); 
+}
+.nav-list{
+  padding: 30rpx 0 30rpx 40rpx;
+  color:black;
+}
+ 
+.page-bottom{
+  height: 100%;
+  position: relative;
+}
+.off-nav-list{
+  position: fixed;
+  width: 33rpx;
+  height: 80rpx;
+  top: 100rpx;
+  left:15rpx;
+}
+.page-bottom-content{
+  padding:100rpx 20rpx 30rpx;
+  color: #fff;
+}
+.page-mask{
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0,0,0,0.5); 
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.page-mask-hide{
+  display: none;
+}

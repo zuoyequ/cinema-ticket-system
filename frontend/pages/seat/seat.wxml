@@ -1,0 +1,31 @@
+<view class="seat-message" wx:if="{{loading}}">正在加载座位…</view>
+<view class="seat-message" wx:if="{{error}}">{{error}}<button size="mini" bindtap="retry">重试</button></view>
+<view class="all" wx:if="{{show}}">
+  <view class="head"><text>{{show.seat}}</text></view>
+  <view class="screen-title">银幕方向</view>
+  <view class="mid">
+    <view class="left"><text class="row-number" wx:for="{{rowLabels}}" wx:key="*this">{{item}}</text></view>
+    <view class="seat-box">
+      <view class="seat-cell" wx:for="{{seats}}" wx:key="id" data-index="{{index}}" bindtap="selected">
+        <image class="sImg" src="{{item.state==3?'/icon/shafa3.png':item.state==2?'/icon/shafa2.png':'/icon/shafa.png'}}" mode="aspectFit"/>
+      </view>
+    </view>
+  </view>
+  <view class="tubiao">
+    <image src="/icon/shafa.png"/><text>可选</text>
+    <image src="/icon/shafa2.png"/><text>已选</text>
+    <image src="/icon/shafa3.png"/><text>不可选</text>
+  </view>
+  <view class="midden">
+    <view class="movie-title">{{show.movie_name}}</view>
+    <view class="info"><text>{{show.time}} {{show.time_start}} — {{show.time_end}} {{show.type}}</text></view>
+    <view class="zoomtop">
+      <text>购票人数：</text>
+      <radio-group bindchange="radioChange">
+        <label wx:for="{{radios}}" wx:key="*this"><radio value="{{item}}" checked="{{radioStr==item}}" disabled="{{buying || confirming}}"/>{{item}}人</label>
+      </radio-group>
+    </view>
+    <view class="seat-summary">已选：{{selectedText || '请选择座位'}}</view>
+  </view>
+  <view class="btn"><button bindtap="buyll" loading="{{buying}}" disabled="{{!selectedNum || loading || buying || confirming}}">确认购票 {{selectedNum?'¥'+totalPrice:''}}</button></view>
+</view>

@@ -1,0 +1,180 @@
+/* pages/seat/seat.wxss */
+.seat-message { padding: 24rpx; text-align: center; color: #666; }
+.screen-title { text-align: center; margin: 24rpx 60rpx; padding: 12rpx; background: #ddd; border-radius: 0 0 40rpx 40rpx; color: #666; }
+.movie-title { margin: 20rpx 30rpx 0; font-size: 32rpx; font-weight: bold; }
+.seat-summary { margin: 20rpx 30rpx; font-size: 26rpx; color: #555; }
+.all{
+  height: 100%;
+  width: 100%;
+  background-color: rgb(241, 241, 241);
+}
+.head{
+  margin-top: 40rpx;
+  width: 97%;
+  margin-left: 10rpx;
+  height: 50rpx;
+}
+.head text{
+  margin-left: 300rpx;
+  font-size: 27rpx;
+}
+
+.mid{
+  display: flex;
+  flex-direction: row;
+}
+.left{
+  width: 420rpx;
+  background-color: rgb(199, 202, 202);
+  border-radius: 20rpx;
+  margin-left: 8rpx;
+  display: flex;
+  flex-direction: column;
+  
+}
+.left text{
+  margin-left: 17rpx;
+  font-size: 30rpx;
+  color: aliceblue;
+  font-weight: 600;
+}
+.t1{
+  margin-top: 20rpx;
+}
+.t2{
+  margin-top: 53rpx;
+}
+.sImg{
+  width: 70rpx;
+  height: 80rpx;
+}
+.seat-box{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-right: 20rpx;
+}
+.tubiao{
+  display: flex;
+  margin-left: 40rpx;
+  margin-top: 50rpx;
+}
+
+.tubiao image{
+  width: 50rpx;
+  height: 60rpx;
+  margin-left: 30rpx;
+}
+.tubiao text{
+  margin-left: 8rpx;
+  margin-top: 14rpx;
+}
+.midden{
+  margin-top: 15rpx;
+  margin-left: 19rpx;
+  width: 94%;
+  height: 315rpx;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15rpx;
+}
+.txt1{
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-left: 40rpx;
+}
+.txt2{
+  color: rgb(90, 156, 255);
+  font-size: 27rpx;
+  font-weight: 600;
+  margin-left: 400rpx;
+}
+.info{
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+}
+.txt3{
+  font-size: 29rpx;
+  color: rgb(192, 189, 189);
+  margin-left: 7rpx;
+}
+.line{
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  background: #E0E3DA;
+  width: 92%;
+  height: 5rpx;
+}
+.count{
+  display: flex;
+  margin-top: 15rpx;
+}
+.count text{
+  font-size: 27rpx;
+  margin-left: 40rpx;
+}
+
+.btn{
+  height: 140rpx;
+}
+.btn button{
+  width: 94%;
+  margin-top: 35rpx;
+  background-color: rgb(90, 156, 255);
+  border-radius: 50rpx;
+  color: white;
+}
+.zoomtop{
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+}
+.inputInfor{
+  margin-top: 20rpx;
+}
+radio .wx-radio-input {
+  width: 35rpx;
+  height: 35rpx;
+  border-radius: 50%;
+  border: 2rpx solid #000;
+  background: transparent;
+}
+
+radio .wx-radio-input.wx-radio-input-checked {
+  width: 35rpx;
+  height: 35rpx;
+  border: 2rpx solid #000;
+  background-color: white !important;/*外圈边框与内圈实心圆间的内容的颜色，不设置就默认是上面的绿色*/
+}
+radio .wx-radio-input.wx-radio-input-checked::before {
+  width: 35rpx;
+  height: 35rpx;
+  border-radius: 50%;
+  /* 圆角 */
+  width: 20rpx;
+  /* 选中后对勾大小，不要超过背景的尺寸 */
+  height: 20rpx;
+  /* 选中后对勾大小，不要超过背景的尺寸 */
+  line-height: 20rpx;
+  text-align: center;
+  font-size: 0rpx;
+  /* 对勾大小 30rpx */
+  color: transparent;
+  /* 对勾颜色 白色 */
+  background: #000;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+
+/* 座位按每排九座排列，画面索引与实际座位 ID 分开保存。 */
+.head { text-align: center; height: auto; padding: 20rpx 0; margin-top: 0; }
+.head text { margin-left: 0; }
+.left { width: 40rpx; flex-shrink: 0; margin-left: 10rpx; }
+.left .row-number { height: 70rpx; line-height: 70rpx; margin: 0; text-align: center; }
+.seat-box { flex: 1; display: grid; grid-template-columns: repeat(9, minmax(0, 1fr)); gap: 0; margin-right: 16rpx; }
+.seat-cell { height: 70rpx; display: flex; align-items: center; justify-content: center; }
+.seat-box .sImg { width: 58rpx; height: 60rpx; }
+.midden { height: auto; padding-bottom: 20rpx; }
+.zoomtop radio-group { display: flex; flex-wrap: wrap; margin-top: 16rpx; }
+.zoomtop label { margin: 8rpx; font-size: 26rpx; }

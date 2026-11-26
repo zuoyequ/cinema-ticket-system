@@ -1,0 +1,72 @@
+<view wx:for="{{get_movie_content}}">
+  <view class="head">
+    <view class="img">
+      <image class="img1" src="/icon/13 (2).jpg" mode="heightFix"/>
+    </view>
+    <view class="right">
+      <view class="Mname">
+        <text style="font-size: 40rpx; font-weight: 600;">{{item.movie_name}}</text>
+      </view>
+      <view class="body">
+        <text style="font-size: 25rpx;">{{item.english_name}}</text>
+        <text class="huang">{{item.huang}}</text>
+        <text style="font-size: 30rpx;">{{item.style}}</text>
+        <text style="font-size: 30rpx;">{{item.start}}</text>
+      </view>
+      <view class="aiguo">
+        <image src="/icon/xiangkan.png" mode="widthFix"/>
+        <image src="/icon/kanguo.png" mode="widthFix"/>
+      </view>
+    </view>
+  </view>
+  <view class="mid" bind:tap="gotoComment" data-movie_name="{{item.movie_name}}">
+    <view class="pingfen">
+      <text class="t1">{{item.score_name}}</text>
+      <text class="t2">{{item.score}}</text>
+      <text class="t3">{{item.score_number}}</text>
+    </view>
+    <view class="percent">
+      <view class="renshu">
+        <text>{{item.number}}</text>
+      </view>
+      <view class="xping">
+        <view class="xxx">
+          <image src="/icon/5x.png" mode="aspectFit" />
+          <image src="/icon/4x.png" mode="aspectFit" />
+          <image src="/icon/3x.png" mode="aspectFit" />
+          <image src="/icon/2x.png" mode="aspectFit" />
+          <image src="/icon/1x.png" mode="aspectFit" />
+        </view>
+        <view class="ccc">
+          <progress percent="70" color="white" active stroke-width="3" style="width: 185rpx;"></progress>
+          <progress percent="19" color="white" active stroke-width="3" style="width: 185rpx;"></progress>
+          <progress percent="8" color="white" active stroke-width="3" style="width: 185rpx;"></progress>
+          <progress percent="2" color="white" active stroke-width="3" style="width: 185rpx;"></progress>
+          <progress percent="1" color="white" active stroke-width="3" style="width: 185rpx;"></progress>
+        </view>  
+      </view>
+    </view>
+  </view>
+
+  <view class='special'>
+    <view class="wenzi">
+      <text style="font-size: 40rpx; font-weight: 600;">简介</text>
+      <view class='xiala_btn' bindtap='ellipsis'>
+        <view class="zhanshou"><text>{{ellipsis?'展开':'收起'}}</text></view>
+        <image class='xiala' src="{{ellipsis?'/icon/xiangxia.png':'/icon/xiangshang.png'}}"></image>
+      </view>
+    </view>
+    <view class="view_jianjie {{ellipsis?'ellipsis':'unellipsis'}}">
+     {{item.content}}
+    </view>
+  </view>
+  <view class="yanyuan">
+    <text style="margin-left: 45rpx;font-size: 40rpx; font-weight: 600;">演职人员</text>
+    <view class="tup">
+      <scroll-view scroll-x="true" class="scoll-view">
+        <view class="ccc" wx:for="{{artistList}}"><image src="{{item.img}}" mode="heightFix"/><text class="txt1">{{item.Rname}}</text><text class="txt2">{{item.name}}</text></view>
+    </scroll-view>
+    </view>
+  </view>
+  <view class="buyBtn"><button bind:tap="gotoBuy" data-index="{{id}}">前往购票</button></view>
+</view>

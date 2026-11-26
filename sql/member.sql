@@ -1,0 +1,1 @@
+INSERT INTO `member` (`id`, `username`, `gender`, `address`, `birth`, `work`, `email`, `user`, `telephone`, `password`, `type`, `state`) VALUES (1, '会员1', '女', '小小号', '2011-8', '会员', '154545548@qq.com', '01', '15465484547', '123456', 2, '1');

@@ -1,0 +1,37 @@
+<navigation-bar title="详情" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+<view class="arrow"  bindtap="tuichu"></view>
+<view class="swiper-box" bindtouchmove="tauchMove" bindtouchstart="tauchStart" bindtouchend="tauchEnd" data-index="{{index}}">
+  <view class="item-box {{item.zIndex==1?'none':''}}" wx:for="{{swiperList}}" wx:key="index" style="--index:{{item.zIndex}};--left:{{item.mLeft}}">
+    <view class="swiper-item">
+      <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+    </view>
+  </view>
+</view>
+<view class="bottom">
+  <scroll-view scroll-x="true" class="scoll-view">
+    <view class="tab">
+    <view class="tab-item" wx:for="{{tab}}" wx:key="id" bind:tap="changetab" data-index="{{index}}" style="color: {{item.isclick==true?'skyblue':'black'}}">{{item.name}}</view>
+    </view>
+  </scroll-view>
+  <view class="content" wx:for="{{get_buyticket_list}}">
+    <view class="content_item" style="display: {{active==0?'block':'none'}}">
+      <view class="content_item2">
+        <view class="time">
+          <text style="font-weight: 600; align-self: center; margin-top: 30rpx; font-size: 41rpx;">{{item.time_start}}</text>
+          <text style="font-weight: 400; font-size: 30rpx; align-self: center;">{{item.time_end}}</text>
+        </view>
+        <view class="movieP">
+          <text style="font-size: 35rpx;">{{item.type}}</text>
+          <text style="font-size: 30rpx;">{{item.seat}}</text>
+        </view>
+        <view class="movieB">
+          <image class="img1" src="/icon/RMB.png" mode="aspectFill"/><text>{{item.price}}</text>
+          <view class="vipBuy"><text>{{item.vip_price}}</text></view>
+        </view>
+        <image class="image2" src="/icon/goupiao.png" mode="aspectFit" bind:tap="buyTicket" data-show-id="{{item.buy_id}}" data-index="{{index}}" data-time_start="{{item.time_start}}" data-time="{{item.time}}" data-movie_name="{{item.movie_name}}"/>
+      </view>
+    </view>
+    <view class="content_item" style="display: {{active==1?'block':'none'}}">
+    </view>
+  </view>
+</view>

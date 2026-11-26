@@ -1,0 +1,143 @@
+# ============================================================================
+# 影院购票与影视周边商城系统 —— Docker 一键启动
+#
+# 使用方式（在项目根目录执行）：
+#   docker compose up -d           # 启动 MySQL、Redis、ZooKeeper、Kafka、Memcached 和后端
+#   docker compose up -d mysql redis zookeeper   # 只启动中间件，后端用 IDE 本地跑
+#   docker compose logs -f backend               # 查看后端日志
+#   docker compose down                          # 停止
+#
+# 说明：
+#   1. MySQL 容器映射到宿主机 3307，避免和你本机已安装的 MySQL（3306）冲突；
+#      容器内的后端通过 mysql:3306 访问。
+#   2. MySQL 首次启动会自动执行 sql/init.sql，建库、建表并导入演示数据。
+#   3. Redis 缓存影片，Memcached 缓存商品，Kafka 处理订单通知，ZooKeeper 用于选座锁。
+# ============================================================================
+# 显式指定项目名：项目目录是中文名，Docker Compose 无法自动推导合法的项目名
+name: cinema
+
+services:
+
+  mysql:
+    image: mysql:8.0
+    container_name: cinema-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: "123456"
+      MYSQL_DATABASE: cinema
+      TZ: Asia/Shanghai
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_general_ci
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+      - cinema-mysql-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-uroot", "-p123456"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+
+  redis:
+    image: redis:7-alpine
+    container_name: cinema-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - cinema-redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  zookeeper:
+    image: zookeeper:3.9
+    container_name: cinema-zookeeper
+    restart: unless-stopped
+    ports:
+      - "2181:2181"
+    environment:
+      ZOO_4LW_COMMANDS_WHITELIST: "srvr,ruok,mntr"
+    healthcheck:
+      test: ["CMD", "zkServer.sh", "status"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+
+  memcached:
+    image: memcached:1.6-alpine
+    container_name: cinema-memcached
+    restart: unless-stopped
+    command: ["memcached", "-m", "64", "-I", "1m"]
+    ports:
+      - "127.0.0.1:11211:11211"
+
+  kafka:
+    image: apache/kafka:3.9.1
+    container_name: cinema-kafka
+    restart: unless-stopped
+    environment:
+      KAFKA_NODE_ID: "1"
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_LISTENERS: PLAINTEXT://:9092,CONTROLLER://:9093
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: "1"
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: "1"
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: "1"
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: "0"
+      KAFKA_LOG_DIRS: /var/lib/kafka/data
+      KAFKA_HEAP_OPTS: -Xms256m -Xmx512m
+      CLUSTER_ID: MkU3OEVBNTcwNTJENDM2Qk
+    volumes:
+      - cinema-kafka-data:/var/lib/kafka/data
+    healthcheck:
+      test: ["CMD", "/opt/kafka/bin/kafka-topics.sh", "--bootstrap-server", "localhost:9092", "--list"]
+      interval: 10s
+      timeout: 10s
+      retries: 30
+      start_period: 20s
+
+  backend:
+    image: cinema-backend:latest
+    build:
+      context: ./backend
+    container_name: cinema-backend
+    restart: unless-stopped
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      zookeeper:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+      memcached:
+        condition: service_started
+    environment:
+      DB_URL: "jdbc:mysql://mysql:3306/cinema?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8"
+      DB_USERNAME: root
+      DB_PASSWORD: "123456"
+      REDIS_HOST: redis
+      REDIS_PORT: "6379"
+      ZK_CONNECT: "zookeeper:2181"
+      KAFKA_ENABLED: "true"
+      KAFKA_BOOTSTRAP_SERVERS: "kafka:9092"
+      MEMCACHED_ENABLED: "true"
+      MEMCACHED_SERVERS: "memcached:11211"
+      TZ: Asia/Shanghai
+    ports:
+      - "8080:8080"
+
+volumes:
+  cinema-mysql-data:
+  cinema-redis-data:
+  cinema-kafka-data:

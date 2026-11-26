@@ -1,0 +1,73 @@
+/* pages/main/main.wxss */
+.header{
+  height: 200rpx;
+  padding: 40rpx 30rpx;
+  display: flex;
+  background-color: #73ccd8;
+  color: azure;
+}
+.image image{
+  width: 190rpx;
+  height: 200rpx;
+  margin-top: -10rpx;
+}
+.title{
+  font-size: 52rpx;
+  font-weight: 700;
+  padding: 20rpx;
+}
+.info{
+  font-size: 28rpx;
+  padding: 20rpx;
+}
+
+.body{
+  padding: 40rpx;
+}
+.one{
+  height: 100rpx;
+  margin-top:30rpx;
+  margin-left: 30rpx;
+  width: 92%;
+  box-shadow: #77778a 0 0 5rpx;
+  border-radius: 10rpx;
+}
+
+.remember{
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+  color: #77778a;
+}
+.btn{
+  margin-top: 30rpx;
+  background-image: linear-gradient(to right, #73ccd8, #ffffff);
+}
+.two{
+  border: solid 1rpx #73ccd8;
+  margin-top: 40rpx;
+  width: 100%;
+  background-color: #73ccd8;
+  border-radius: 40rpx;
+}
+.radio-group{
+  margin-top: 30rpx;
+}
+.radio{
+  margin-left: 22rpx;
+  color: #77778a;
+}
+.end{
+  display: flex;
+  justify-content: center;
+  margin-top: 20rpx;
+  color: #77778a;
+}
+.center{
+  display: flex;
+  justify-content: center;
+}
+.end-power{
+  color: #d6d6d6;
+  position: fixed;
+  bottom: 50rpx;
+}

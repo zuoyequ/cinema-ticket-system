@@ -1,0 +1,73 @@
+<view class="backB">
+  <view class="head">
+    <image src="{{image}}" class="im1" bind:tap="changeImg"/>
+    <view class="abc">
+      <view class="shenf" wx:for="{{chaxun1}}">
+        <text class="t1">{{item.username}}</text>
+        <text style="font-size: 30rpx;">普通游客</text>
+      </view>
+      <text class="t2">个人信息</text>
+      <view style="margin-top: 1rpx;" bind:tap="gotoPerson"  data-id="{{id}}" data-type="{{type}}"><image src="/icon/xiangyou.png" mode="aspectFit" class="xiangyou"/></view>
+    </view>
+  </view>
+  <view class="body">
+    <view class="v" bind:tap="gotoShop" data-id="{{id}}">
+      <image src="/icon/shangcheng.jpg" mode="aspectFit" class="si"/>
+      <text style="font-size: 26rpx;margin-left: 45rpx;">在线商城</text>
+    </view>
+    <view class="v">
+      <image src="/icon/shoucangjia.jpg" mode="aspectFit" class="si"/>
+      <text style="margin-left: 55rpx;font-size: 30rpx;">收藏夹</text>
+    </view>
+    <view class="v">
+      <image src="/icon/qianbao.jpg" mode="aspectFit" class="si"/>
+      <text style="margin-left: 43rpx;font-size: 30rpx;">我的钱包</text>
+    </view>
+    <view class="v">
+      <image src="/icon/jilu.jpg" mode="aspectFit" class="si"/>
+      <text style="margin-left: 43rpx;font-size: 30rpx;">观影记录</text>
+    </view>
+  </view>
+  <view class="bottom">
+    <view class="list"  bind:tap="gotoEdit" data-type="{{type}}" data-id="{{id}}">
+      <image src="/icon/mine_.png" ></image>
+        <view class="txt"><text>编辑资料</text></view>
+        <image src="/icon/xiangyou2.png" mode="aspectFit" class="you"/>
+    </view>
+    <view class="list">
+      <image src="/icon/huangguan.jpg"></image>
+        <view class="txt"><text>会员中心</text></view>
+        <image src="/icon/xiangyou2.png" mode="aspectFit" class="you"/>
+    </view>
+    <view class="list" bind:tap="gotoDingdan" data-id="{{id}}">
+      <image src="/icon/dingdan.jpg"></image>
+        <view class="txt"><text>订单详情</text></view>
+        <image src="/icon/xiangyou2.png" mode="aspectFit" class="you"/>
+    </view>
+    <view class="list" bind:tap="gotoAddress">
+      <image src="/icon/zuobiao.png"></image>
+        <view class="txt"><text>收货地址</text></view>
+        <image src="/icon/xiangyou2.png" mode="aspectFit" class="you"/>
+    </view>
+    <view class="list">
+      <image src="/icon/kefu.jpg"></image>
+        <view class="txt"><text>在线客服</text></view>
+        <image src="/icon/xiangyou2.png" mode="aspectFit" class="you"/>
+    </view>
+    <view class="list">
+      <image src="/icon/guanyu.png"></image>
+        <view class="txt"><text>关于我们</text></view>
+        <image src="/icon/xiangyou2.png" mode="aspectFit" class="you"/>
+    </view>
+    <view class="list">
+      <image src="/icon/shezhi.png"></image>
+        <view class="txt"><text>应用设置</text></view>
+        <image src="/icon/xiangyou2.png" mode="aspectFit" class="you"/>
+    </view>
+    <view class="list" bind:tap="exit">
+      <image src="/icon/tuichu.jpg"></image>
+        <view class="txt"><text>退出登录</text></view>
+        <image src="/icon/xiangyou2.png" mode="aspectFit" class="you"/>
+    </view>
+  </view>
+</view>

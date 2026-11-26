@@ -1,0 +1,42 @@
+# 本机端口转发进程、日志及临时文件
+/.runtime/
+*.log
+*.tmp
+*.bak
+
+# Java / Maven 构建产物
+**/target/
+*.class
+
+# Node / 前端构建产物
+**/node_modules/
+**/dist/
+**/coverage/
+
+# 微信开发者工具个人设置；共享 project.config.json 保留在仓库中
+frontend/project.private.config.json
+
+# IDE 与系统文件
+**/.idea/
+**/.vscode/
+*.iml
+*.iws
+*.ipr
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# 本地密钥、凭据及个人环境覆盖（示例配置可以提交）
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+*.p12
+*.pfx
+.aws/
+.kube/
+backend/src/main/resources/application-local.properties
+backend/src/main/resources/application-local.yml
+backend/src/main/resources/application-local.yaml

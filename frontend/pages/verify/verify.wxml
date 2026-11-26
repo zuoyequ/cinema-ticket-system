@@ -1,0 +1,5 @@
+<!--pages/verify/verify.wxml-->
+ 
+<slide-verify enable-close="{{true}}" bind:onsuccess="verifySuccess" bind:onerror="verifyError">
+</slide-verify>
+ 

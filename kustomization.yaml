@@ -1,0 +1,27 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: cinema
+resources:
+  - k8s/namespace.yaml
+  - k8s/workloads.yaml
+configMapGenerator:
+  - name: cinema-mysql-init
+    files:
+      - init.sql=sql/init.sql
+  - name: cinema-config
+    literals:
+      - DB_URL=jdbc:mysql://mysql:3306/cinema?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8
+      - DB_USERNAME=root
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - ZK_CONNECT=zookeeper:2181
+      - KAFKA_ENABLED=true
+      - KAFKA_BOOTSTRAP_SERVERS=kafka:9092
+      - MEMCACHED_ENABLED=true
+      - MEMCACHED_SERVERS=memcached:11211
+      - TZ=Asia/Shanghai
+# 本地课程演示凭据。真实部署请替换密码并使用集群的密钥管理方案。
+secretGenerator:
+  - name: cinema-db
+    literals:
+      - password=123456

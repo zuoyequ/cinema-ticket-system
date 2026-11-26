@@ -1,0 +1,69 @@
+<!--pages/statistics/statistics.wxml-->
+<view class="tab">
+  <view class="tab-item" wx:for="{{tab}}" wx:key="id" bind:tap="changetab" data-index="{{index}}" style="color: {{item.isclick==true?'black':'#999'}}">{{item.name}}</view>
+</view>
+<view  style="display: {{active==0?'block':'none'}}">
+  <view class="txt"><text>座位占用率</text><text style="font-size: 27rpx; margin-left: 15rpx;">(前十)</text></view>
+  <view class="seat-choice">
+    <view class="rank" wx:for="{{ellipsis?rankList1:rankList2}}">
+      <text class="t1">#{{item.rank}}</text>
+      <text class="t2">{{item.seat}}</text>
+      <text class="t3">({{item.count}})次</text>
+      <progress percent="{{item.percent}}" stroke-width="5" class="percent"></progress>
+    </view>
+    <image class='xiala' src="{{ellipsis?'/icon/xiangxia2.png':'/icon/xiangshang2.png'}}"  bindtap='ellipsis'></image>
+  </view>
+  <view class="txt"><text>票房统计</text></view>
+<view class="all">
+  <view class="head">
+    <view class="kong2"></view>
+    <text class="w1">排名</text>
+    <text class="w2">片名</text>
+    <text class="w3">票房(万元)</text>
+    <text class="w4">场均人数</text>
+  </view>
+  <view wx:for="{{piaofList}}">
+    <view class="list" style="background-color:{{item.rank%2==0?'#f6f6f6':'white'}}">
+      <view class="h1"><text>#{{item.rank}}</text></view>
+      <view class="body">
+        <text>{{item.name}}</text>
+        <text class="b2">{{item.time}}上映</text>
+      </view>
+      <view class="p"><text>{{item.sum}}</text></view>
+      <view class="r"><text>{{item.count}}</text></view>
+    </view>
+  </view>
+</view>
+</view>
+
+
+<view class="container">
+  <view class="echarts">
+    <ec-canvas id="myChart" canvas-id="myChart" ec="{{ec}}"></ec-canvas>
+  </view>
+</view>
+
+<view class="container1">
+  <view class="echarts">
+    <ec-canvas id="myChart" canvas-id="myChart" ec="{{ac}}"></ec-canvas>
+  </view>
+</view>
+<view class="all">
+  <view class="head">
+    <view class="kong2"></view>
+    <text class="w1">排名</text>
+    <text class="w2">商品名</text>
+    <text class="w3">销售额</text>
+    <text class="w5">销量</text>
+  </view>
+  <view wx:for="{{shopList}}">
+    <view class="list" style="background-color:{{item.rank%2==0?'#f6f6f6':'white'}}">
+      <view class="h2"><text>#{{item.rank}}</text></view>
+      <view class="body">
+        <text class="text1">{{item.name}}</text>
+      </view>
+      <view class="p2"><text>{{item.sum}}</text></view>
+      <view class="r2"><text>{{item.count}}</text></view>
+    </view>
+  </view>
+</view>
